@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fevicol image-->
+    <link rel="icon" type="image/jpg" sizes="192x192" href="images.jpg">
+    <title>About Us</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Pacifico&display=swap" rel="stylesheet">      
+     <!-- Animate CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+     <link rel="stylesheet" href="styleour.css">
+     <script>
+        function session_check()
+        {
+            document.getElementById("user_label").innerHTML ="<h2>"+ sessionStorage.getItem("USERNAME"); + "</h1>"
+            //sessionStorage.removeItem("USERNAME");
+        }
+     </script>
+</head>
+<body onload="session_check()" id="bgimage">
+    <div class="col-sm-12">
+        <nav class="navbar navbar-expand-lg navbar-transparent bg-transparent">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" id="servicesHeading">Our Services</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div id="myDIV" class="d-flex flex-row">
+                    <li class="nav-item ">
+                        <a class="nav-link mybtn activeone" aria-current="page" href="#">About us</a>
+                    </li> &nbsp;&nbsp; &nbsp;&nbsp; 
+                    <li class="nav-item ">
+                        <a class="nav-link mybtn" aria-current="page" href="#">Services</a>
+                    </li>  &nbsp;&nbsp; &nbsp;&nbsp;
+                    <li class="nav-item ">
+                        <a class="nav-link mybtn" aria-current="page" href="#">Contact us</a>
+                    </li>  &nbsp;&nbsp; &nbsp;&nbsp;  
+                </div>
+                </ul>
+                <div>
+                <!--User Display label-->
+                     <p id='user_label' class="mb-0 animate__animated animate__bounceInRight" ></p> 
+                    <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </div>
+        <div class="col-sm-12">
+            <div class="mt-3" style="text-align: center" id="devby">
+                <h2 class="animate__animated animate__fadeInDown">This Site is Created by IFuture Private Limited. </h2> <br>
+                <h3 class="animate__animated animate__fadeIn">Developed by:</h3> <br>
+                    <h4 class="animate__animated animate__bounce animate__delay-1s">Ankita </h4> <br>
+                    <h4 class="animate__animated animate__bounce animate__delay-2s">Lavina</h4> <br>
+                    <h4 class="animate__animated animate__bounce animate__delay-3s">Viddesh</h4>
+            </div>
+        </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("nav-link");
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("activeone");
+        current[0].className = current[0].className.replace(" activeone", "");
+        this.className += " activeone";
+        });
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* Style the buttons */
+.mybtn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* Style the active class, and buttons on mouse-over */
+  .activeone, .mybtn:hover {
+    background-color: #7472d6;
+    color: rgb(12, 255, 4);
+    border-radius: 25px;
+  }
+
+  #bgimage {
+    background-image: url('wall.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #servicesHeading{
+    font-size: 40px;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    font-family: 'Pacifico', cursive;
+     /* color: magenta; */ 
+  }
+#devby{
+  font-family: 'Acme', sans-serif;
+}
